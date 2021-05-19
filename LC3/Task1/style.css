@@ -1,0 +1,23 @@
+body {
+  background-image: url(https://wallpaperaccess.com/full/84248.png);
+}
+p {
+  font-weight: 300;
+  line-height: 20%;
+  font-size: 100%;
+}
+#p1 {
+  color: #ffb6c1;
+}
+#p2 {
+  color: peru;
+}
+#p3 {
+  color: rgb(187, 235, 159);
+}
+#p4 {
+  color: hsl(66, 100%, 48%);
+}
+#p5 {
+  color: hsla(0, 0%, 0%, 0.644);
+}

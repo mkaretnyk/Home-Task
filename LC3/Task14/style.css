@@ -1,0 +1,36 @@
+table {
+  width: 200px;
+  height: 200px;
+  border-collapse: collapse;
+}
+
+[class ^= "blue"] {
+  background-color: blue;
+}
+
+.blue1 {
+  border-top-right-radius: 45%;
+  border-top-left-radius: 45%;
+}
+.blue3{
+    border-bottom-left-radius: 45%;
+    border-bottom-right-radius: 45%;
+}
+
+[class ^= "red"] {
+  background-color: red;
+}
+
+.red1{
+    border-top-left-radius: 45%;
+}
+.red2, .red5{
+    border-top-right-radius: 45%;
+    border-bottom-right-radius: 45%;
+}
+.red4{
+    border-bottom-left-radius: 45%;
+}
+.blue-alone{
+    border-radius: 50%;
+}

@@ -1,0 +1,10 @@
+span:first-child{
+    font-weight: bold ;
+}
+
+span~span{
+    font-style: italic;
+}
+p{
+    font-size: larger;
+}

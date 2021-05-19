@@ -1,0 +1,7 @@
+div {
+  outline: dashed 4px red;
+}
+p {
+  outline-style: double;
+  outline-offset: -5px;
+}

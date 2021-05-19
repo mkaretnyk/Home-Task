@@ -1,0 +1,9 @@
+div{
+    background-image: url(http://toplogos.ru/images/logo-w3c.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 200px;
+    box-shadow: inset 20px -20px 10px green, inset -20px 20px 10px black, -30px -30px 10px red, 30px 30px 10px blue;
+    margin: 50px 50px;
+}
