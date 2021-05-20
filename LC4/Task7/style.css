@@ -1,0 +1,9 @@
+body{
+  display: inline-block;
+}
+div{
+  border: 1px solid black;
+  display: inline;
+  float: left;
+  box-sizing: border-box;
+}

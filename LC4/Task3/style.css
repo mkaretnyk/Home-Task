@@ -1,0 +1,19 @@
+*{
+  width: 500px;
+}
+#green{
+  float: right;
+  width:400px;
+}
+#black{
+  width: 300px;
+  float: left;
+}
+#red, #light-blue{
+  float:left;
+  width: 100px;
+}
+#blue, #pink, #yellow{
+  float: right;
+  width: 100px;
+}

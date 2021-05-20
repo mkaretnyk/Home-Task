@@ -1,0 +1,22 @@
+#first, #second, #third, #fourth, #fifth, #sixth{
+  width: 10%;
+  border: 1px solid black;
+}
+#first{
+  float: right;
+}
+#second{
+  float: left;
+}
+#third{
+  float: right;
+}
+#fourth{
+  float: left;
+}
+#fifth{
+  float: right;
+}
+#sixth{
+  float: left;
+}

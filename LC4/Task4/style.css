@@ -1,0 +1,17 @@
+#one, #two{
+  width: 30%;
+}
+#one, #two, #wrapper{
+  background-color: red;
+}
+#one{
+  float: left;
+}
+#two{
+  float: right;
+}
+#three{
+  margin-left: 31%;
+  margin-right: 31%;
+  background-color: white;
+}

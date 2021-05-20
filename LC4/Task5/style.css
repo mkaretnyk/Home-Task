@@ -1,0 +1,14 @@
+#div{
+    display: list-item;
+    list-style-type: upper-alpha;
+    margin-left: 20px;
+}
+.block-A {
+    display: block;
+  }
+  .block-B {
+    display: inline;
+  }
+  .block-C {
+    display: inline-block;
+  }

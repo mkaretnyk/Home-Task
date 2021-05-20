@@ -1,0 +1,16 @@
+/*.aside{
+  border: 1px dashed black;
+}
+.main{
+  border: 1px solid black;
+}*/
+.aside{
+  box-sizing: border-box ;
+  border: 1px dashed black;
+  padding: 20px;
+}
+.main{
+  box-sizing: border-box ;
+  border: 1px solid black;
+  padding: 20px;
+}

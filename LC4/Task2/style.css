@@ -1,0 +1,19 @@
+#one-one-two{
+  width: 90%;
+  background-color: red;
+}
+#one-three{
+  width: 10%;
+  background-color: green;
+  float: right;
+}
+#two-one{
+  width: 10%;
+  background-color: green;
+  float: left;
+}
+#two-two-three{
+  width: 90%;
+  background-color: red;
+  float: left;
+}

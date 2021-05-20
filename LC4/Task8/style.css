@@ -1,0 +1,22 @@
+*{
+  color: white;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+}
+#one{
+  background-color: red;
+  margin-left: 50px;
+  margin-top: 50px;
+}
+#two{
+  background-color: green;
+}
+#three{
+  background-color: blue;
+  margin-left: 50px;
+}
+#four{
+  background-color: black;
+  margin-top: 50px;
+}
