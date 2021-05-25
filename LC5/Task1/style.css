@@ -1,0 +1,16 @@
+.flex-container{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 50%;
+}
+
+#flex-item-3{
+  align-self: stretch;
+}
+#flex-item-2, #flex-item-4{
+  align-self: center;
+}
+#flex-item-5{
+  align-self:flex-end;
+}
