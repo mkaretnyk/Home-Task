@@ -1,0 +1,23 @@
+<script>
+    let a = parseInt(prompt());
+    let b = parseInt(prompt());
+
+    if (a != b) {
+        if (a > b) {
+            let c = a + b;
+            a = c - b;
+            b = c - b;
+        }
+        else {
+            let c = a + b;
+            b = c - a;
+            a = c - a;
+        }
+    }
+    else {
+        a = 0;
+        b = a;
+    }
+    alert("a: " + a + "b: " + b);
+
+</script>
