@@ -1,0 +1,170 @@
+<script>
+    //Task 1
+    function isEmpty(obj){
+        for(let key in obj){
+            return false;
+        }
+        return true;
+    }
+
+    //Task 2
+    function multiplyNumeric(obj){
+        for(let key in obj){
+            if(typeof obj[key] == "number"){
+                obj[key] *= 2;
+            }
+        }
+    }
+
+    //Task 3 
+    function readNumber(){
+        while(true){
+            let num = prompt();
+            if(num == "" || num == null){
+                return null;
+            }
+            if (typeof num == "number" && num !=isNaN){
+                return num;
+            }
+        }
+    }
+
+    //Task 4
+    function random(min, max){
+        return min + Math.random() * (max - min);
+    }
+
+    //Task 5
+    function randomInteger(min, max){
+        let num = min + Math.random() * (max + 1 - min);
+        return Math.floor(num);
+    }
+
+    //Task 6
+    function ucFirst(str){
+        let arr = str.split('')
+        let letter = arr[0].toUpperCase() ;   
+        arr[0] = letter;
+        return arr.join('');
+    }
+
+    //Task 7
+    function checkSpam(str){
+        let string = str.toLowerCase();
+        return string.includes('viagra') || string.includes('xxx');
+    }
+
+    //Task 8
+    function truncate(str, maxlength) {
+        if ( str.length > maxlength){
+            return str.slice (0, maxlength) + '...';
+        } 
+        else {
+            return str;
+        }
+    }
+
+    //Task 9
+    function extractCurrencyValue(str){
+        return parseInt(str.slice);
+    }
+
+    //Task 10
+    function sumInput(){
+        let arr = [];
+        let sum = 0;
+        while(true){
+            let num = prompt();
+            arr.push(+num);
+            if(num == "" || num == null || !isFinite(num)){
+                break;
+            }
+        }
+        for(let i = 0; i < arr.length; i++){
+            sum = sum + arr[i];
+        }
+        return sum;
+    }
+
+    //Task 11
+    function getMaxSubSum(arr) {
+        let sum = 0; 
+        for (let i = 0; i < arr.length; i++) {
+            let sumInner = 0;
+            for (let j = i; j < arr.length; j++) {
+                sumInnert += arr[j];
+                sum = Math.max(sum, sumInner);
+            }
+        }
+        return sum;
+    }
+
+    //Task 12
+    //отличий нет, работают одинаково
+
+    //Task 13
+    function checkAge(age) {
+        return (age > 18) ? true : confirm('Родители разрешили?');
+    }
+    function checkAge(age) {
+        return (age > 18) || confirm('Родители разрешили?');
+    } 
+    
+    //Task 14
+    function min(a, b){
+        if(a<b){
+            return a;
+        }
+        else{
+            return b;
+        }
+    }
+
+    //Task 15
+    function pow(x,n){
+        return x ** n;
+    }
+    /*
+    let x = +prompt("Введите число");
+    let n = +prompt("Введите степень");
+
+    if (n > 0 && Number.isInteger(x) && Number.isInteger(n)) {
+       alert(pow(x, n));
+    } else {
+       alert('введите коректные значения');
+    }*/
+
+    //Task16
+    function ask(question, yes, no) {
+        if (confirm(question)) yes()
+        else no();
+        }
+
+    /*ask(
+        "Вы согласны?",
+        () => alert("Вы согласились."),
+        () => alert("Вы отменили выполнение.")
+    );*/
+
+    //Task 17
+    let income = 3333;
+    let cons = 1750;
+    let cost = 8000;
+    let clear = income - cons;
+    let time = Math.floor(cost / clear);
+    console.log(time);
+
+    //Task 18
+   /* let arr =[];
+    let sum = 0;
+    for(let i =0; i < 10; i++){
+        let num = +prompt();
+        arr.push(num);
+        if(num < 0){
+            sum = sum + num;
+        }
+    }
+    console.log(sum);*/
+</script>
+ 
+ 
