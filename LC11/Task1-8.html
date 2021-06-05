@@ -1,0 +1,105 @@
+<script>
+//Task 1
+function copySorted(arr){
+    return arr.slice().sort();
+}
+
+let arr = ["HTML", "JavaScript", "CSS"];
+let sorted = copySorted(arr);
+
+console.log(sorted);
+console.log(arr);
+
+//Task 2
+let vasya = { name: "Вася", age: 25 };
+let petya = { name: "Петя", age: 30 };
+let masha = { name: "Маша", age: 28 };
+
+let users = [ vasya, petya, masha ];
+
+let names = users.map(element => element.name);
+
+console.log(names);
+
+//Task 3
+let jora = { name: "Жора", age: 25 };
+let katya = { name: "Катя", age: 30 };
+let dasha = { name: "Даша", age: 29 };
+
+let array = [jora, katya, dasha];
+
+function getAverageAge(array){
+    let sum = 0;
+    array.forEach(element => {
+        sum = sum + element.age;
+        });
+    let result = sum / array.length;
+    return result;
+}
+
+console.log(getAverageAge(array))
+
+//Task 4
+function unique(arr) {
+    let result = [];
+    for (let key of arr) {
+        if (!result.includes(key)) {
+        result.push(key);
+        }
+    }
+    return result;
+}
+let strings = ["кришна", "кришна", "харе", "харе",
+  "харе", "харе", "кришна", "кришна", ":-O"
+];
+console.log(unique(strings));
+
+//Task 5
+function sum(a){
+    return function arg(b){
+        return a + b;
+    }
+}
+console.log(sum(1)(2)); 
+console.log(sum(5)(-1));
+
+//Task 6
+function inBetween(a, b) {
+  return function arg(x) {
+    return x >= a && x <= b;
+  }
+}
+function inArray(arr) {
+  return function arg(x) {
+    return arr.includes(x);
+  };
+}
+
+let str = [1,2,3,4,5];
+console.log(str.filter(inArray([1, 2, 3])));
+console.log(str.filter(inBetween(3, 5))); 
+
+//Task 7
+function factorial(num) {
+    if (num != 1) {
+        return  num * factorial(num - 1)
+    }
+    return num;
+}
+
+console.log(factorial(5));
+
+//Task 8 
+function fib(n) {
+    if(n <= 1){
+        return n;       
+    }
+    else{
+        return fib(n - 1) + fib(n - 2)
+    }
+  
+}
+console.log(fib(7))
+</script>
+ 
+ 
