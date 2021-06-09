@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <div id="calendar"></div>
+    <script>
+        function createCalendar(elem, year, month) {
+            let table = document.createElement("table");
+            table.insertRow();
+            table.rows[0].className = "days";
+            let days = ["пн", "вт", "cp", "чт", "пн", "сб", "вс"];
+            for (let day of days) {
+                let cur = table.rows[0].insertCell();
+                cur.innerHTML = day;
+            }
+
+            let date = new Date(year, month - 1, 1);
+            let day = date.getDay() - 1;
+            if (day == -1) {
+                day = 6;
+            }
+
+            let dayInMonth = new Date(year, month, 0).getDate();
+
+            for (let i = 1, row = table.insertRow(), cell; i <= dayInMonth; i++, day++) {
+                if (i == 1) {
+                    Array.from({ length: day }).forEach(elem => row.insertCell());
+                }
+                if (day == 7) {
+                    day = 0;
+                    row = table.insertRow();
+                }
+                cell = row.insertCell();
+                cell.innerHTML = i;
+            }
+            if (day != 7) {
+                let lastRow = table.rows[table.rows.length - 1];
+                while (day < 7) {
+                    lastRow.insertCell();
+                    day++;
+                }
+            }
+            elem.append(table);
+        }
+
+        createCalendar(calendar, 2012, 9);
+    </script>
+</body>
+
+</html>

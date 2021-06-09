@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <ul id="ul"></ul>
+    <script>
+        function interface() {
+            let time = setTimeout(function interval() {
+                let txt = prompt("Add list item");
+                if (txt) {
+
+                    let li = document.createElement("li");
+                    li.append(txt);
+                    ul.append(li);
+
+                    setTimeout(interval, 100)
+                }
+            }, 100);
+        }
+        interface();
+    </script>
+</body>
+
+</html>
