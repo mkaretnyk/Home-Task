@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.btn, .form input[name="ok"], .form input[name="cancel"] {
+  border: none;
+  width: 150px;
+  height: 30px;
+}
+
+.form {
+  border: 1px solid black;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 100;
+  display: none;
+  padding: 20px;
+}
+
+.form input[name="text"] {
+  display: block;
+  width: 100%;
+}
+
+

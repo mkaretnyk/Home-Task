@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        #field {
+            width: 200px;
+            height: 150px;
+            border: 10px solid black;
+            background-color: #00FF00;
+            overflow: hidden;
+        }
+
+        #ball {
+            position: relative;
+            left: 0;
+            top: 0;
+            width: 40px;
+            height: 40px;
+            transition: all 1s;
+
+        }
+    </style>
+</head>
+
+<body style="height:2000px">
+
+    Нажмите на поле для перемещения мяча.
+    <br> Мяч не должен выходить за границы поля.
+
+    <div id="field">
+        <img src="https://ru.js.cx/clipart/ball.svg" id="ball"> . . . . .
+        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+        . . . . . . . . . . . .
+    </div>
+
+    <script>
+        field.onclick = function (e) {
+
+            let points = field.getBoundingClientRect();
+
+            let leftSide = points.left + field.clientLeft + ball.offsetWidth / 2;
+            let topSide = points.top + field.clientTop + ball.offsetHeight / 2;
+
+            let xCoord = e.clientX - (leftSide);
+            let yCoord = e.clientY - (topSide);
+
+            let xMin = points.left + field.clientLeft + ball.offsetWidth / 2;
+            let yMin = points.top + field.clientTop + ball.offsetHeight / 2;
+            let xMax = points.left + points.width - field.clientLeft - ball.offsetWidth / 2;
+            let yMax = points.top + points.height - field.clientTop - ball.offsetWidth / 2;
+
+
+
+            if (e.clientX < (xMin)) {
+                xCoord = xMin - leftSide;
+            }
+
+            if (e.clientX > xMax) {
+                xCoord = xMax - leftSide;
+            }
+
+            if (e.clientY < yMin) {
+                yCoord = yMin - topSide;
+            }
+
+            if (e.clientY > yMax) {
+                yCoord = yMax - topSide;
+            }
+
+            ball.style.left = (xCoord) + 'px';
+            ball.style.top = (yCoord) + 'px';
+        };
+    </script>
+</body>
+
+</html>
